@@ -12,9 +12,10 @@ class chatbook:
                         3. Write a post
                         4. Message to friend
                         5. Exit""")
+        print("\n")
         
         if user_input == '1':
-            pass
+            self.signup()
         elif user_input == '2':
             pass
         elif user_input == '3':
@@ -27,6 +28,17 @@ class chatbook:
         else:
             print("Invalid option, please try again.")
             self.menu()
+
+    def signup(self):
+        email = input("Enter your email: ")
+        password = input("Enter your password: ")
+        self.username = email.split('@')[0]
+        self.password = password
+        print(f"User {self.username} registered successfully!")
+        print("\n")
+        self.menu()
+
+    def login(self):
 
 
 obj = chatbook()
